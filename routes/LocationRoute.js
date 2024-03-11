@@ -3,12 +3,12 @@ import { createLocation, listDistrict, listProvince, listSubdistrict,getDistrict
 // import { verifyUser, adminOnly } from '../middleware/AuthUser.js';
 const router = express.Router();
 
-router.post('/location', createLocation)
-router.get('/province', listProvince)
-router.get('/district/:id', listDistrict)
-router.get('/subdistrict/:id', listSubdistrict)
+router.post('/api/location', createLocation)
+router.get('/api/province', listProvince)
+router.get('/api/district/:id', listDistrict)
+router.get('/api/subdistrict/:id', listSubdistrict)
 
-router.get('/districtBy', getDistrict)
+router.get('/api/districtBy', getDistrict)
 
 
 

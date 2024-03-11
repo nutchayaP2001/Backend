@@ -35,9 +35,9 @@ export const getCartPage = async(req,res) => {
 
 export const getCartById = async(req,res) => {
     try {
-        const response = await CartItem.findOne({
+        const response = await CartItem.findAll({
             where: {
-                id: req.params.id
+                saleId: req.params.id
             },
             include: [
                 {
@@ -49,8 +49,39 @@ export const getCartById = async(req,res) => {
             },
             {
                 model: Users,
-                attributes: ['userFname']
+                attributes: ['userEmail']
             }
+        ],
+        order: [
+            ['createdAt', 'DESC']
+          ]
+        });
+        res.status(200).json(response)
+    } catch (error) {
+        res.status(500).json({ msg: error.message });
+        
+    }
+
+}
+
+export const getCartProductById = async(req,res) => {
+    try {
+        const response = await CartItem.findAll({
+            where: {
+                productId: req.params.id
+            },
+            include: [
+                {
+                model: Products
+            },
+            // {
+            //     model: Sales,
+            //     attributes: ['salesNo','TotalSalesPrice']
+            // },
+            // {
+            //     model: Users,
+            //     attributes: ['userEmail']
+            // }
         ],
         order: [
             ['createdAt', 'DESC']

@@ -19,16 +19,16 @@ import { verifyUser } from '../middleware/AuthUser.js';
 
 const router = express.Router();
 
-router.get('/products',verifyUser, getProducts);
-router.get('/productsale', getProductsSale);
-router.post('/products',verifyUser,  createProduct);
-router.delete('/products/:id', verifyUser, deleteProduct);
+router.get('/api/products',verifyUser, getProducts);
+router.get('/api/productsale', getProductsSale);
+router.post('/api/products',verifyUser,  createProduct);
+router.delete('/api/products/:id', verifyUser, deleteProduct);
 
 // Update
-router.get('/product/:id', verifyUser, getProductById);
-router.patch('/products/:id',verifyUser, updateProduct);
+router.get('/api/product/:id', verifyUser, getProductById);
+router.patch('/api/products/:id',verifyUser, updateProduct);
 
-router.post('/productby', getBy);
+router.post('/api/productby', getBy);
 
 
 // Search

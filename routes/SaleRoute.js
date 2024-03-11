@@ -4,7 +4,7 @@ import { verifyUser } from '../middleware/AuthUser.js';
 
 const router = express.Router();
 
-router.get('/salesnumber', verifyUser, getSale);
-router.post('/salesnumber', verifyUser, SaveNumberSale);
+router.get('/api/salesnumber', verifyUser, getSale);
+router.post('/api/salesnumber', verifyUser, SaveNumberSale);
 
 export default router;

@@ -12,12 +12,12 @@ import { verifyUser, verifyCustomer } from '../middleware/AuthUser.js';
 
 const router = express.Router();
 
-router.get('/payments',verifyUser,getPayments);
-router.get('/payments/:id', verifyUser, getPaymentById);
-router.post('/payments',verifyCustomer, createPayments);
-router.patch('/paymentstatus/:id', verifyUser, createPaymentStatus);
-router.patch('/payments/:id',verifyUser, updatePayments);
-router.delete('/payments/:id',deletePayments);
+router.get('/api/payments',verifyUser,getPayments);
+router.get('/api/payments/:id', verifyUser, getPaymentById);
+router.post('/api/payments',verifyCustomer, createPayments);
+router.patch('/api/paymentstatus/:id', verifyUser, createPaymentStatus);
+router.patch('/api/payments/:id',verifyUser, updatePayments);
+router.delete('/api/payments/:id',deletePayments);
 
 
 

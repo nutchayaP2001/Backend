@@ -51,7 +51,7 @@ export const Login = async(req, res) => {
           userEmail: req.body.userEmail
         }
       });
-      if(!user) return res.status(404).json({msg: 'ไม่พบผู้ใช้'});
+      if(!user) return res.status(404).json({msg: 'ไม่พบชื่อผู้ใช้'});
       const match = await argon2.verify(user.userPass, req.body.userPass);
       if(!match) return res.status(400).json({msg: 'รหัสผ่านไม่ถูกต้อง'});
       req.session.userId = user.id;

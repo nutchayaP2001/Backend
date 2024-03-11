@@ -11,11 +11,11 @@ import { verifyCustomer, verifyUser } from '../middleware/AuthUser.js';
 
 const router = express.Router();
 
-router.get('/productdamages',verifyUser, getProductDamage);
+router.get('/api/productdamages',verifyUser, getProductDamage);
 // router.get('/productadmin',verifyUser, getAdmin);
-router.get('/productdamages/:id', getProductDamageById);
-router.post('/productdamages', verifyCustomer,createProductDamage);
-router.patch('/productdamages/:id', verifyUser, updateStatusProductDamage);
-router.delete('/productdamages/:id', deleteProductDamage);
+router.get('/api/productdamages/:id', getProductDamageById);
+router.post('/api/productdamages', verifyCustomer,createProductDamage);
+router.patch('/api/productdamages/:id', verifyUser, updateStatusProductDamage);
+router.delete('/api/productdamages/:id', deleteProductDamage);
 
 export default router;

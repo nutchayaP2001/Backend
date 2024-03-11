@@ -56,10 +56,29 @@ app.use(session({
     }
 }));
 
+// app.use(function (req, res, next) {
+
+//     res.setHeader('Access-Control-Allow-Origin', 'https://bestphotodigital.com');
+
+ 
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+ 
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+//     res.setHeader('Access-Control-Allow-Credentials', true);
+
+
+//     next();
+// });
+
 app.use(cors({
     credentials: true,
     origin: 'http://localhost:3001'
 }));
+
+
+
 app.use(express.json());
 app.use(FileUpload());
 app.use(express.static('public'));
@@ -76,5 +95,8 @@ app.use(Promotion);
 app.use(CartRoute)
 app.use(SalesRoute)
 // store.sync();
+
+
+
 
 app.listen(process.env.APP_PORT, () => console.log('Server Up and Ruuning...'));

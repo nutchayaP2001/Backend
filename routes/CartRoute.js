@@ -1,15 +1,16 @@
 import express from 'express';
 import { verifyUser } from '../middleware/AuthUser.js';
-import { deleteCart, getCartById, getCartPage, postCartPage, updateCart } from '../controllers/CartController.js';
+import { deleteCart, getCartById, getCartPage, getCartProductById, postCartPage, updateCart } from '../controllers/CartController.js';
 
 
 const router = express.Router();
 
-router.get('/cart', verifyUser,getCartPage);
-router.get('/cart/:id', getCartById);
-router.post('/cart',verifyUser, postCartPage);
-router.patch('/cart/:id', updateCart);
-router.delete('/cart/:id', deleteCart)
+router.get('/api/cart', getCartPage);
+router.get('/api/cart/:id', getCartById);
+router.get('/api/cartproduct/:id', getCartProductById);
+router.post('/api/cart',verifyUser, postCartPage);
+router.patch('/api/cart/:id', updateCart);
+router.delete('/api/cart/:id', deleteCart)
 
 
 export default router;
