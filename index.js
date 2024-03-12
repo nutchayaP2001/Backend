@@ -19,25 +19,25 @@ import CartRoute from './routes/CartRoute.js'
 import SalesRoute from './routes/SaleRoute.js';
 // import StockRoute from './routes/StockRoute.js'
 import SequelizeStore from "connect-session-sequelize";
-// import db from './config/Database.js'
-import { Sequelize } from "sequelize";
+// import { Sequelize } from "sequelize";
+import db from './config/Database.js';
 
 
 dotenv.config();
 
 const app = express();
 
-const connection = new Sequelize({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_DATABASE 
-})
+// const connection = new Sequelize({
+//     host: process.env.DB_HOST,
+//     user: process.env.DB_USER,
+//     password: process.env.DB_PASSWORD,
+//     database: process.env.DB_DATABASE 
+// })
 
 const sessionStore = SequelizeStore(session.Store);
 
 const store = new sessionStore({
-    db: connection
+    db: db
 
 });
 
