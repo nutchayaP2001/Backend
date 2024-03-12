@@ -75,7 +75,7 @@ app.use(session({
 // });
 
 const allowedDomains = [
-    'https://main.darotue4qbpnw.amplifyapp.com/',
+    'https://dark-erin-gharial-ring.cyclic.app/',
     // 'http://localhost:3001',
     // 'https://bestphotodigital.com'
 ]
