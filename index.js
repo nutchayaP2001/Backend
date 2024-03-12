@@ -60,7 +60,7 @@ app.use(session({
 
 app.use(function (req, res, next) {
 
-    res.setHeader('Access-Control-Allow-Origin', 'https://dark-erin-gharial-ring.cyclic.app/');
+    res.setHeader('Access-Control-Allow-Origin', '*');
 
  
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
