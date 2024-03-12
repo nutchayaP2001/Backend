@@ -1,5 +1,4 @@
 import { Sequelize } from "sequelize";
-dotenv.config();
 
 const db = new Sequelize(
     'project_bestphoto',

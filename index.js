@@ -19,7 +19,7 @@ import CartRoute from './routes/CartRoute.js'
 import SalesRoute from './routes/SaleRoute.js';
 // import StockRoute from './routes/StockRoute.js'
 import SequelizeStore from "connect-session-sequelize";
-import db from './config/Database.js'
+// import db from './config/Database.js'
 
 dotenv.config();
 
