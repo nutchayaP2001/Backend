@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-// import mysql from "mysql2"
+import mysql from "mysql2"
 import session from 'express-session';
 import FileUpload from 'express-fileupload';
 import dotenv from 'dotenv';
@@ -25,13 +25,12 @@ dotenv.config();
 
 const app = express();
 
-// const db = mysql.createConnection({
-//     host: 'bestphotodb.cb0qk4w26ku7.ap-southeast-2.rds.amazonaws.com',
-//     port: '3307',
-//     user: 'admin',
-//     password: 'sehun220244',
-//     database: 'bestphotodb'
-// })
+const connection = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE 
+})
 
 const sessionStore = SequelizeStore(session.Store);
 
