@@ -27,6 +27,7 @@ export const getCartPage = async(req,res) => {
           ]
         });
         res.json(cartItems);
+        // console.log(cartItems)
     }catch (error){
         console.error(error);
         res.status(500).json({error: "Internal server error"})

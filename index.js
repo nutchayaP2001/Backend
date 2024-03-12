@@ -58,7 +58,7 @@ app.use(session({
 
 // app.use(function (req, res, next) {
 
-//     res.setHeader('Access-Control-Allow-Origin', 'https://bestphotodigital.com');
+//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
 
  
 //     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
@@ -72,9 +72,15 @@ app.use(session({
 //     next();
 // });
 
+const allowedDomains = [
+    'http://localhost:3001',
+    // 'http://localhost:3001',
+    // 'https://bestphotodigital.com'
+]
 app.use(cors({
     credentials: true,
-    origin: 'http://localhost:3001'
+    origin: allowedDomains,
+    optionsSuccessStatus:200
 }));
 
 
