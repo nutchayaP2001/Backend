@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import mysql from "mysql2"
+// import mysql from "mysql2"
 import session from 'express-session';
 import FileUpload from 'express-fileupload';
 import dotenv from 'dotenv';
