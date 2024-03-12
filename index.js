@@ -75,7 +75,7 @@ app.use(session({
 // });
 
 const allowedDomains = [
-    'http://localhost:3001',
+    'https://main.darotue4qbpnw.amplifyapp.com/',
     // 'http://localhost:3001',
     // 'https://bestphotodigital.com'
 ]
