@@ -58,32 +58,31 @@ app.use(session({
     }
 }));
 
-// app.use(function (req, res, next) {
+app.use(function (req, res, next) {
 
-//     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
-
- 
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Origin', 'https://main.darotue4qbpnw.amplifyapp.com/');
 
  
-//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
-//     res.setHeader('Access-Control-Allow-Credentials', true);
+ 
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    res.setHeader('Access-Control-Allow-Credentials', true);
 
 
-//     next();
-// });
+    next();
+});
 
-const allowedDomains = [
-    'https://dark-erin-gharial-ring.cyclic.app/',
-    // 'http://localhost:3001',
-    // 'https://bestphotodigital.com'
-]
-app.use(cors({
-    credentials: true,
-    origin: allowedDomains,
-    optionsSuccessStatus:200
-}));
+// const allowedDomains = [
+//     'https://dark-erin-gharial-ring.cyclic.app/',
+
+// ]
+// app.use(cors({
+//     credentials: true,
+//     origin: allowedDomains,
+//     optionsSuccessStatus:200
+// }));
 
 
 
