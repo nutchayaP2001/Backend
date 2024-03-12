@@ -20,12 +20,14 @@ import SalesRoute from './routes/SaleRoute.js';
 // import StockRoute from './routes/StockRoute.js'
 import SequelizeStore from "connect-session-sequelize";
 // import db from './config/Database.js'
+import { Sequelize } from "sequelize";
+
 
 dotenv.config();
 
 const app = express();
 
-const connection = mysql.createConnection({
+const connection = new Sequelize({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
