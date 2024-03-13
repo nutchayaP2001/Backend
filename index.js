@@ -58,31 +58,31 @@ app.use(session({
     }
 }));
 
-app.use(function (req, res, next) {
+// app.use(function (req, res, next) {
 
-    res.setHeader('Access-Control-Allow-Origin', 'https://main.darotue4qbpnw.amplifyapp.com/');
-
- 
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+//     res.setHeader('Access-Control-Allow-Origin', 'https://main.darotue4qbpnw.amplifyapp.com/');
 
  
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Origin, Authorization');
+//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
 
-    res.setHeader('Access-Control-Allow-Credentials', true);
+ 
+//     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type,Origin, Authorization');
+
+//     res.setHeader('Access-Control-Allow-Credentials', true);
 
 
-    next();
-});
+//     next();
+// });
 
-// const allowedDomains = [
-//     'https://dark-erin-gharial-ring.cyclic.app/',
+const allowedDomains = [
+    'https://main.darotue4qbpnw.amplifyapp.com/',
 
-// ]
-// app.use(cors({
-//     credentials: true,
-//     origin: allowedDomains,
-//     optionsSuccessStatus:200
-// }));
+]
+app.use(cors({
+    credentials: true,
+    origin: allowedDomains,
+    optionsSuccessStatus:200
+}));
 
 
 
