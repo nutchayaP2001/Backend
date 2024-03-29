@@ -75,7 +75,7 @@ app.use(session({
 // });
 
 const allowedDomains = [
-    'https://main.darotue4qbpnw.amplifyapp.com/',
+    'https://main.darotue4qbpnw.amplifyapp.com',
     'http://localhost:3001'
 
 ]
